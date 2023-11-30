@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.MainPic{
+/* Saly-1 */
+position: absolute;
+width: 385px;
+height: 385px;
+top: 25px;
+left: 749px;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #0089ED; /* Синий цвет для верхней половины */
+    z-index: -1; /* Чтобы ::before был "за" основным содержимым body */
+}
+
+
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #FFFFFF; /* Белый цвет для нижней половины */
+    z-index: -1; /* Чтобы ::after был "за" основным содержимым body */
+}
+
+.logo{
+    position: absolute;
+    width: 1000px;
+    height: 30px;
+    top: 31px;
+    left: 75px;
+    color:#FFFFFF;
+    font-size: 20px;
+    font-weight: 600; 
+}
+.SignInTo{
+    position: absolute;
+    width: 396px;
+    height: 51px;
+    top: 150px;
+    left: 73px;
+    color:#FFFFFF;
+    font-size: 34px;
+    font-weight: 600; 
+}
+.SignInToUnder{
+    width: 396px;
+    height: 36px;
+    top: 201px;
+    left: 73px;
+
+    position: absolute;
+    color:#FFFFFF;
+    font-size: 24px;
+    font-weight: 400; 
+}
+.SignInToUnderUnder{
+    width: 311px;
+    height: 115px;
+    top: 259px;
+    left: 75px;
+    position: absolute;
+    color:#FFFFFF;
+    font-size: 13px;
+    font-weight: 300; 
+}
+
+.login-signup {
+    position: absolute;
+    width: 85px;
+    height: 40px;
+    top: 30px;
+    right: 50px; /* Изменено значение right */
+    z-index: 1;
+}
+
+
+.login-signup .text{
+    position: relative;
+    font-size: 13px;
+    font-weight: 400; 
+    color: #8D8D8D;
+    display: block; /* Ensures the block takes up space even if it's empty */
+}
+
+.login-signup .text a {
+    position: relative;
+    font-size: 13px;
+    font-weight: 400; 
+    color: #0089ED; 
+    text-decoration: none;
+}
+
+.login-signup .text a:hover {
+    text-decoration: underline;
+}
+
+.login-signin {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    top: 30px;
+    right: 50px; /* Изменено значение right */
+    z-index: 1;
+}
+
+
+.login-signin .text{
+    position: relative;
+    font-size: 13px;
+    font-weight: 400; 
+    color: #8D8D8D;
+    display: block; /* Ensures the block takes up space even if it's empty */
+}
+
+.login-signin .text a {
+    position: relative;
+    font-size: 13px;
+    font-weight: 400; 
+    color: #0089ED; 
+    text-decoration: none;
+}
+
+.login-signin .text a:hover {
+    text-decoration: underline;
+}
+
+.container{
+    position: absolute;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    /*width: 100%;*/
+    width: 539px;
+    height: 741px; /*741 1582*/
+    top: 79px;
+    left: 1250px;
+    transition: height 0.2s ease;
+    overflow: hidden;
+}
+
+.container .forms{
+    /*display: flex;*/
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    /*background-color: red;*/
+}
+
+/*hdhdh*/
+
+.container .form{
+    position: absolute;
+    padding: 30px;
+    /*display: flex;
+    align-items: center;*/
+    width: 100%;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login{
+    margin-left: -50%;
+    left:0;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup{
+    /*left: -20%;*/
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.container.active {
+    height: 900px; /* Новая высота при активации "Sign up" */
+    transition: height 0.2s ease;
+}
+
+.container.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    
+}
+
+.container.active .forms{
+    height: 688px;
+}
+
+.container .form .Uptitle{
+    
+    position: relative;
+    font-size: 22px;
+    font-weight: 400;  
+}
+.container .form .UptitleAfter{
+    
+    position: relative;
+    font-size: 21px;
+    font-weight: 600;  
+    color:#0089ED;
+}
+.container .form .title{
+    
+    position: relative;
+    font-size: 55px;
+    font-weight: 500;  
+}
+
+.container .form .Log{
+    
+    margin-top: 30px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+.container .form .Pas{
+    
+    margin-top: 20px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form .input-field{
+    position: relative;
+    height: 57px;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+.input-field input{
+    height: 100%;
+    width: 100%;
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.form .button{
+margin-top: 80px;
+}
+
+.form .button input{
+    border: none;
+    color:#FFFFFF;
+    background-color: #0089ED;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 500;  
+    border-radius: 10x;
+}
+
+.button input:hover{
+    background-color: #0c7fd1;
+}
